@@ -1,0 +1,57 @@
+body {
+  background-color: #4d315863;
+}
+
+.header {
+  background: url("./image/header.png");
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+}
+
+div h2 {
+  font-style: italic;
+  text-align: center;
+  margin: 10px;
+}
+
+.hobbies {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.works {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.testimonial {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.gallery {
+  background-color: rgba(188, 68, 192, 0.452);
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-grid {
+  justify-content: space-between;
+  margin: 10px;
+  text-align: center;
+}
+
+.gallery img {
+  height: 200px;
+  width: 200px;
+}
