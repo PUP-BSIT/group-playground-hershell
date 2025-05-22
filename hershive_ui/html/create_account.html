@@ -5,17 +5,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Create New Account</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/hershive_ui/style/create_account.css" />
 </head>
 
 <body>
   <div class="account-form-container">
     <div class="account-form">
       <div class="image-upload">
-        <div class="image-circle">
-          <span>add image</span>
-        </div>
+        <label for="profileImage">
+          <div class="image-circle" id="imagePreview">
+            <span>add image</span>
+          </div>
+        </label>
+        <input type="file" id="profileImage" accept="image/*" >
       </div>
+
       <h2>Create new account</h2>
 
       <form>
