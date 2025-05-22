@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f3e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.account-form-container {
+  background-color: #dfd9cb;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #999;
+  width: 400px;
+}
+
+.account-form {
+  text-align: center;
+}
+
+.image-upload {
+  margin-bottom: 10px;
+}
+
+.image-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: url('https://via.placeholder.com/70x70.png?text=Add+Image') center/cover no-repeat;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  background-color: #e0e0e0;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  outline: none;
+  flex: 1;
+}
+
+textarea {
+  border-radius: 15px;
+  resize: none;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
