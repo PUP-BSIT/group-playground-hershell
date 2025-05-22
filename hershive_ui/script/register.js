@@ -8,3 +8,14 @@ function validateForm() {
   }
   return true;
 }
+
+function toggleVisibility(id, btn) {
+  const input = document.getElementById(id);
+  if (input.type === "password") {
+    input.type = "text";
+    btn.textContent = "Hide";
+  } else {
+    input.type = "password";
+    btn.textContent = "Show";
+  }
+}
