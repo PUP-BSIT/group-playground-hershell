@@ -17,9 +17,12 @@
 
       <div class="right">
         <div class="form-box">
-          <form onsubmit="return validateForm()">
-            <input type="email" id="email" placeholder="Email" required/>
+          <form
+            onsubmit="return validateForm()"
+            action="create_account.html"
+            method="get">
 
+            <input type="email" id="email" placeholder="Email" required/>
             <input type="text" id="username" placeholder="Username" required/>
 
             <input
@@ -31,7 +34,7 @@
                 one lowercase, and one number."
               required/>
 
-            <input
+              <input
               type="password"
               id="confirm_password"
               placeholder="Confirm Password"
