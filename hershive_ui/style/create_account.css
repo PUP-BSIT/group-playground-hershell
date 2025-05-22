@@ -109,3 +109,11 @@ button {
 #profile_image, #remove_image {
   display: none;
 }
+
+.birthday-label {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  white-space: nowrap;
+}
