@@ -23,3 +23,8 @@ function removeImage() {
   preview.innerHTML = '<span id="previewText">add image</span>';
   uploadBox.classList.remove("has-image");
 }
+
+function goToHome(event) {
+  event.preventDefault();
+  window.location.href = "/hershive_ui/html/home.html";
+}
