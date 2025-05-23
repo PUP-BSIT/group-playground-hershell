@@ -32,7 +32,7 @@
   <div class="main-container">
     <div class="left-content">
       <!-- Trigger Create Post Modal -->
-      <div class="create-post" id="shareTrigger">
+      <div class="create-post" id="shareTrigger" onclick="openPostModal()">
         <div class="main-create-post">
           <img src="../assets/temporary_pfp.png" alt="user profile" class="profile-pic">
           <span>Share something</span>
@@ -100,7 +100,7 @@
     <div class="create-post-modal">
       <div class="modal-header">
         <h2>Create Post</h2>
-        <button class="close-button" id="closeModal">×</button>
+        <button class="close-button" onclick="closePostModal()">×</button>
       </div>
       <span class="username">John Doe</span>
       <textarea class="textarea" placeholder="Share something..."></textarea>
