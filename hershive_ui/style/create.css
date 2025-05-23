@@ -89,14 +89,16 @@ body {
     flex-direction: column;
     border-radius: 10px;
     background-color: #dfdbcd;
-    padding: 20px;
-    width: 500px;
+    padding: 40px;
+    width: 1000px;
+    height: auto;
     position: fixed;
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     z-index: 1000;
 }
+
 
 .modal-header {
     display: flex;
