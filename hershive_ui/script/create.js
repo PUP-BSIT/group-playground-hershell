@@ -1,20 +1,16 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const shareTrigger = document.getElementById("shareTrigger");
+function openPostModal() {
   const postModal = document.getElementById("postModal");
-  const closeModal = document.getElementById("closeModal");
+  postModal.style.display = "flex";
+}
 
-  shareTrigger.addEventListener("click", () => {
-    postModal.style.display = "flex";
-  });
+function closePostModal() {
+  const postModal = document.getElementById("postModal");
+  postModal.style.display = "none";
+}
 
-  closeModal.addEventListener("click", () => {
+window.addEventListener("click", function (e) {
+  const postModal = document.getElementById("postModal");
+  if (e.target === postModal) {
     postModal.style.display = "none";
-  });
-
-  // Optional: close modal when clicking outside the modal
-  window.addEventListener("click", (e) => {
-    if (e.target === postModal) {
-      postModal.style.display = "none";
-    }
-  });
+  }
 });
