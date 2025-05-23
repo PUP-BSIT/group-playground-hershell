@@ -10,20 +10,24 @@
   <body>
     <div class="account-form-container">
       <div class="account-form">
-        <div class="image-upload">
-          <label for="profile_image">
-            <div class="image-circle" id="image_preview">
-              <span>add image</span>
+        <div class="image-upload" id="image_upload">
+          <label for="profileImage">
+            <div
+                class="image-circle"
+                id="image_preview"
+                onclick="triggerFileInput()">
+              <span id="previewText">add image</span>
             </div>
           </label>
           <input
               type="file"
               id="profile_image"
-              accept="image/*"/>
+              accept="image/*"
+              onchange="previewImage(this)"/>
           <button
               type="button"
-              id="remove_image"
-              class="remove-btn">✖
+              class="remove-btn"
+              onclick="removeImage()">✖
           </button>
         </div>
 

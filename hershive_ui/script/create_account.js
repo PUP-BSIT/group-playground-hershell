@@ -1,21 +1,25 @@
-const profileInput = document.getElementById("profile_image");
+const input = document.getElementById("profile_image");
 const preview = document.getElementById("image_preview");
-const removeBtn = document.getElementById("remove_image");
+const uploadBox = document.getElementById("image_upload");
 
-profileInput.addEventListener("change", function () {
-  const file = this.files[0];
+function triggerFileInput() {
+  input.click();
+}
+
+function previewImage(inputElement) {
+  const file = inputElement.files[0];
   if (file) {
     const reader = new FileReader();
     reader.onload = function (e) {
       preview.innerHTML = `<img src="${e.target.result}" alt="Profile Image">`;
-      removeBtn.style.display = "flex";
+      uploadBox.classList.add("has-image");
     };
     reader.readAsDataURL(file);
   }
-});
+}
 
-removeBtn.addEventListener("click", function () {
-  profileInput.value = "";
-  preview.innerHTML = "<span>add image</span>";
-  removeBtn.style.display = "none";
-});
+function removeImage() {
+  input.value = "";
+  preview.innerHTML = '<span id="previewText">add image</span>';
+  uploadBox.classList.remove("has-image");
+}
