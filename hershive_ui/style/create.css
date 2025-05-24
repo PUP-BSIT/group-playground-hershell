@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f5ea;
+  color: black;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 40px;
+}
+
+.search-bar {
+  display: flex;
+  width: 500px;
+  position: relative;
+}
+
+.search-bar img {
+  width: 20px;
+  height: 20px;
+}
+
+.search-button {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  background: none;
+  transform: translateY(-50%);
+  padding: 5px;
+}
+
+.search-button:hover {
+  background-color: #d2be94;
+  border-radius: 50%;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.navigation-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.navigation-icons > button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navigation-icons img {
+  width: 30px;
+  height: 30px;
+}
+
+.menu-button {
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-post {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #dfdbcd;
+    padding: 40px;
+    width: 1000px;
+    height: auto;
+    position: fixed;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.modal-header h2 {
+    font-size: 18px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.textarea {
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    padding: 10px;
+    height: 100px;
+    resize: none;
+}
+
+.formatting-options {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.submit-button {
+    background-color: #3b82f6; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-button:hover {
+    background-color: #2563eb;
+}
+

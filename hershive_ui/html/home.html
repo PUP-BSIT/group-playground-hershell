@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hershive</title>
-  <link rel="stylesheet" href="../style/home.css">
+  <link rel="stylesheet" href="../style/home.css" />
 </head>
 
 <body>
@@ -29,38 +30,96 @@
   </div>
 
   <div class="main-container">
-    <div class="create-post">
-      <div class="main-create-post">
-        <img src="../assets/temporary_pfp.png" alt="user profile" class="profile-pic">
-        <span>Share something</span>
+    <div class="left-content">
+      <!-- Trigger Create Post Modal -->
+      <div class="create-post" id="shareTrigger" onclick="openPostModal()">
+        <div class="main-create-post">
+          <img src="../assets/temporary_pfp.png" alt="user profile" class="profile-pic">
+          <span>Share something</span>
+        </div>
+        
+        <div class="sub-create-post">
+          <label class="upload-option">
+            <div class="image">
+              <img src="../assets/camera_icon.png" alt="image">
+              <span>image</span>
+            </div>
+            <input type="file" accept="image/*" hidden>
+          </label>
+          
+          <label class="upload-option">
+            <div class="video">
+              <img src="../assets/video_icon.png" alt="video">
+              <span>video</span>
+            </div>
+            <input type="file" accept="video/*" hidden>
+          </label>
+
+          <div class="privacy">
+            <img src="../assets/public_icon.png" alt="public">
+            <span>
+              <select name="privacy" id="privacy">
+                <option value="public">Public</option>
+                <option value="friends">Friends</option>
+                <option value="private">Private</option>
+              </select>
+            </span>
+          </div>
+        </div>
       </div>
-      
-      <div class="sub-create-post">
-        <div class="image">
-          <img src="../assets/camera_icon.png" alt="image">
-          <span>image</span>
+
+      <!-- Sample Post -->
+      <div class="sample-post">
+        <div class="post-header">
+          <div class="post-header-left">
+            <img src="../assets/temporary_pfp.png" alt="user profile" class="profile-pic">
+            <div class="post-info">
+              <span class="username">Jane Dee</span>
+              <span class="timestamp">May 20 at 6:00PM</span>
+            </div>
+          </div>
+          <div class="more-option">
+            <img src="../assets/more_icon.png" alt="more" onclick="toggleDropdown(this)">
+            <div class="dropdown-menu">
+              <button onclick="editPost(this)">Edit</button>
+              <button onclick="deletePost(this)">Delete</button>
+              <button onclick="cancelDropdown(this)">Cancel</button>
+            </div>
+          </div>
         </div>
 
-        <div class="video">
-          <img src="../assets/video_icon.png" alt="video">
-          <span>video</span>
-        </div>
-
-        <div class="privacy">
-          <img src="../assets/public_icon.png" alt="public">
-
-          <span>
-            <select name="privacy" id="privacy">
-              <option value="public">Public</option>
-              <option value="friends">Friends</option>
-              <option value="private">Private</option>
-            </select>
-          </span>
+        <div class="post-content">
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <img src="../assets/sample-post.png" alt="post image">
+          </div>
         </div>
       </div>
     </div>
 
     <div class="side-panel"></div>
   </div>
+
+  <!-- Create Post Modal -->
+  <div class="modal-overlay" id="postModal">
+    <div class="create-post-modal">
+      <div class="modal-header">
+        <h2>Create Post</h2>
+        <button class="close-button" onclick="closePostModal()">×</button>
+      </div>
+      <span class="username">Jame Dee</span>
+      <textarea class="textarea" placeholder="Share something..."></textarea>
+        <div class="formatting-options">
+          <button>B</button>
+          <button>I</button>
+          <button>Video</button>
+          <button>Public</button>
+          <button class="image-button">Image</button>
+        </div>
+      <button class="submit-button" id="submitPostButton" onclick="submitPost()">Post</button>
+    </div>
+  </div>
+
+  <script src="../script/create.js"></script>
 </body>
 </html>
